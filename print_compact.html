@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京都旅行 印刷用（詰め版）</title>
+    <link rel="stylesheet" href="print_compact.css">
+</head>
+<body>
+    <div class="toolbar no-print">
+        <div>
+            <p class="toolbar-label">A4印刷用（詰め版）</p>
+            <h1 id="printTitle">京都旅行</h1>
+            <p id="printDate" class="toolbar-date"></p>
+        </div>
+        <div class="toolbar-actions">
+            <button type="button" onclick="window.print()">印刷</button>
+            <a href="index.html">アプリへ戻る</a>
+        </div>
+    </div>
+    <main id="printRoot" class="print-app"></main>
+    <script src="print_compact.js"></script>
+</body>
+</html>

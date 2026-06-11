@@ -1,0 +1,1596 @@
+{
+  "trip": {
+    "name": "京都旅行",
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-13",
+    "travelers": [
+      "自分",
+      "同行者"
+    ],
+    "version": 4,
+    "defaultCurrency": "JPY",
+    "notes": [
+      "数量(qty)と単価(unitPrice)を保持する形式",
+      "total は unitPrice × qty の計算結果を明示",
+      "候補時刻や代替案は notes に記録",
+      "station は point、transfer は arrivalPoint/departurePoint を使用",
+      "2日目の時刻が未指定の項目は、旅程の順序だけ保持して time を文字列または空欄にしている"
+    ]
+  },
+  "budget": {
+    "planned": 0,
+    "actual": 0,
+    "categories": [
+      "transport",
+      "food",
+      "activity",
+      "shopping",
+      "hotel"
+    ],
+    "paymentMethods": [
+      "prepaid",
+      "cash",
+      "ic",
+      "card",
+      "other"
+    ]
+  },
+  "timeline": [
+    {
+      "id": "act_home_depart",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "05:55",
+      "name": "自宅 発",
+      "place": "自宅",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "出発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_hitotsuyama_depart",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "06:08",
+      "name": "一ツ山三丁目",
+      "point": "2番のりば",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "bus_hitotsuyama_ookute",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "bus",
+      "from": "一ツ山三丁目",
+      "to": "大久手",
+      "departureTime": "06:08",
+      "arrivalTime": "06:41",
+      "departurePoint": "2番のりば",
+      "arrivalPoint": "5番のりば",
+      "line": "名古屋市営バス 八事12",
+      "destination": "千種駅前",
+      "expenses": [
+        {
+          "name": "バス運賃",
+          "unitPrice": 220,
+          "qty": 1,
+          "total": 220,
+          "payment": "ic",
+          "planned": true,
+          "actual": false,
+          "people": [
+            "自分"
+          ]
+        },
+        {
+          "name": "定期利用",
+          "unitPrice": 0,
+          "qty": 1,
+          "total": 0,
+          "payment": "other",
+          "planned": true,
+          "actual": false,
+          "people": [
+            "同行者"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "バス"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "transfer_ookute",
+      "day": 1,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "大久手",
+      "arrivalTime": "06:41",
+      "departureTime": "06:48",
+      "arrivalPoint": "5番のりば",
+      "departurePoint": "2番のりば",
+      "notes": [
+        "後続候補: 07:06発も利用可"
+      ],
+      "links": []
+    },
+    {
+      "id": "bus_ookute_sasashima",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "bus",
+      "from": "大久手",
+      "to": "笹島町",
+      "departureTime": "06:48",
+      "arrivalTime": "07:09",
+      "departurePoint": "2番のりば",
+      "arrivalPoint": "7番のりば",
+      "line": "名古屋市営バス 名駅17",
+      "destination": "名古屋駅",
+      "expenses": [
+        {
+          "name": "バス運賃",
+          "unitPrice": 220,
+          "qty": 1,
+          "total": 220,
+          "payment": "ic",
+          "planned": true,
+          "actual": false,
+          "people": [
+            "自分"
+          ]
+        },
+        {
+          "name": "定期利用",
+          "unitPrice": 0,
+          "qty": 1,
+          "total": 0,
+          "payment": "other",
+          "planned": true,
+          "actual": false,
+          "people": [
+            "同行者"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "バス"
+        }
+      ],
+      "notes": [
+        "後続候補: 07:06発 → 07:27着"
+      ],
+      "links": []
+    },
+    {
+      "id": "st_sasashima_arrive",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "07:09",
+      "name": "笹島町",
+      "point": "7番のりば",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [
+        "後続候補: 07:27着"
+      ],
+      "links": []
+    },
+    {
+      "id": "food_breakfast",
+      "day": 1,
+      "type": "food",
+      "status": "tentative",
+      "time": "07:15",
+      "name": "朝食（購入 or モーニング）",
+      "place": "クックタウン / アバンテ 他",
+      "expenses": [
+        {
+          "name": "朝食",
+          "unitPrice": 600,
+          "qty": 2,
+          "total": 1200,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "朝食"
+        },
+        {
+          "type": "default",
+          "text": "候補あり"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kintetsu_nagoya_depart",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "08:00",
+      "name": "近鉄名古屋",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_hinotori",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "近鉄名古屋",
+      "to": "大和八木",
+      "departureTime": "08:00",
+      "arrivalTime": "09:37",
+      "arrivalPoint": "4番線・2F",
+      "line": "近鉄特急ひのとり 58列車",
+      "destination": "大阪難波",
+      "expenses": [
+        {
+          "name": "特急券",
+          "unitPrice": 1640,
+          "qty": 2,
+          "total": 3280,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "ひのとりレギュラー料金",
+          "unitPrice": 200,
+          "qty": 2,
+          "total": 400,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "近鉄株主優待乗車券",
+          "unitPrice": 2150,
+          "qty": 2,
+          "total": 4300,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "特急"
+        },
+        {
+          "type": "seat",
+          "text": "5号車 2C/2D"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "transfer_yamatoyagi",
+      "day": 1,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "大和八木",
+      "arrivalTime": "09:37",
+      "departureTime": "09:41",
+      "arrivalPoint": "4番線・2F",
+      "departurePoint": "6番線・1F",
+      "notes": [
+        "D階段で降りるとホーム",
+        "所要3分",
+        "後続候補: 09:52発 普通 大和西大寺行"
+      ],
+      "links": []
+    },
+    {
+      "id": "train_yamatoyagi_saidaiji",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "大和八木",
+      "to": "大和西大寺",
+      "departureTime": "09:41",
+      "arrivalTime": "10:02",
+      "departurePoint": "6番線・1F",
+      "arrivalPoint": "4番線",
+      "line": "近鉄橿原線 急行",
+      "destination": "京都",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "train",
+          "text": "急行"
+        }
+      ],
+      "notes": [
+        "後続候補: 09:52発 普通 → 10:21着"
+      ],
+      "links": []
+    },
+    {
+      "id": "transfer_yamato_saidaiji",
+      "day": 1,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "大和西大寺",
+      "arrivalTime": "10:02",
+      "departureTime": "10:08",
+      "arrivalPoint": "4番線",
+      "departurePoint": "1番線",
+      "notes": [
+        "後続候補: 10:25発も利用可（10:31着）"
+      ],
+      "links": []
+    },
+    {
+      "id": "train_saidaiji_nara",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "大和西大寺",
+      "to": "近鉄奈良",
+      "departureTime": "10:08",
+      "arrivalTime": "10:13",
+      "departurePoint": "1番線",
+      "line": "近鉄奈良線 快速急行",
+      "destination": "奈良",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "train",
+          "text": "快速急行"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kintetsu_nara_arrive",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "10:13",
+      "name": "近鉄奈良",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [
+        "後続候補: 10:31着"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_nara_walk",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "10:20",
+      "name": "奈良散策・買い物",
+      "place": "近鉄奈良周辺",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "散策"
+        },
+        {
+          "type": "default",
+          "text": "買い物候補"
+        }
+      ],
+      "notes": [
+        "柿の葉寿司 たなか なら本店",
+        "商店街散策（岡井麻布商店 他）"
+      ],
+      "links": []
+    },
+    {
+      "id": "food_cafe_groovy",
+      "day": 1,
+      "type": "food",
+      "status": "confirmed",
+      "time": "11:00",
+      "name": "Cafe GROOVY",
+      "place": "近鉄奈良周辺",
+      "expenses": [
+        {
+          "name": "冷やしそうめんと柿の葉寿司セット",
+          "unitPrice": 1250,
+          "qty": 2,
+          "total": 2500,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "昼食"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kintetsu_nara_depart",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "11:55",
+      "name": "近鉄奈良",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_aoniyoshi",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "近鉄奈良",
+      "to": "近鉄京都",
+      "departureTime": "11:55",
+      "arrivalTime": "12:30",
+      "line": "近鉄観光特急あをによし 3便",
+      "destination": "近鉄京都",
+      "expenses": [
+        {
+          "name": "特急券",
+          "unitPrice": 520,
+          "qty": 2,
+          "total": 1040,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "デラックス料金",
+          "unitPrice": 210,
+          "qty": 2,
+          "total": 420,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "乗車券",
+          "unitPrice": 760,
+          "qty": 2,
+          "total": 1520,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "観光特急"
+        },
+        {
+          "type": "seat",
+          "text": "4号車 5C/5D"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "transfer_kintetsu_kyoto_jr_kyoto",
+      "day": 1,
+      "type": "transfer",
+      "status": "confirmed",
+      "arrivalStation": "近鉄京都",
+      "departureStation": "京都",
+      "arrivalTime": "12:30",
+      "departureTime": "12:42",
+      "notes": [
+        "近鉄京都 → 京都（JR）へ乗換"
+      ],
+      "links": []
+    },
+    {
+      "id": "train_kyoto_sagaarashiyama",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "京都",
+      "to": "嵯峨嵐山",
+      "departureTime": "12:42",
+      "arrivalTime": "12:59",
+      "line": "JR嵯峨野線 普通",
+      "destination": "亀岡",
+      "expenses": [
+        {
+          "name": "JR運賃",
+          "unitPrice": 240,
+          "qty": 2,
+          "total": 480,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "JR"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_sagaarashiyama_arrive",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "12:59",
+      "name": "嵯峨嵐山",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "activity_hananoie_baggage",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "13:10",
+      "name": "花のいえ 荷預け",
+      "place": "花のいえ",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "徒歩10分"
+        }
+      ],
+      "notes": [
+        "嵯峨嵐山駅から徒歩約10分",
+        "その後 徒歩約12分で次の予定へ"
+      ],
+      "links": []
+    },
+    {
+      "id": "food_kyotoan",
+      "day": 1,
+      "type": "food",
+      "status": "tentative",
+      "time": "13:30",
+      "name": "京豆庵 豆腐ソフト",
+      "place": "嵐山",
+      "expenses": [
+        {
+          "name": "豆腐ソフト",
+          "unitPrice": 550,
+          "qty": 2,
+          "total": 1100,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "おやつ"
+        },
+        {
+          "type": "default",
+          "text": "候補"
+        }
+      ],
+      "notes": [
+        "時間次第で2日目に回す可能性あり"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_bamboo",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "13:40",
+      "name": "竹林の小径 散策",
+      "place": "嵐山",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "散策"
+        }
+      ],
+      "notes": [
+        "徒歩12分〜"
+      ],
+      "links": []
+    },
+    {
+      "id": "st_torokko_arashiyama_depart",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "14:05",
+      "name": "トロッコ嵐山",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_torokko",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "トロッコ嵐山",
+      "to": "トロッコ亀岡",
+      "departureTime": "14:05",
+      "arrivalTime": "14:25",
+      "line": "嵯峨野観光鉄道 嵯峨野11号",
+      "destination": "トロッコ亀岡",
+      "expenses": [
+        {
+          "name": "乗車券",
+          "unitPrice": 880,
+          "qty": 2,
+          "total": 1760,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "観光列車"
+        },
+        {
+          "type": "seat",
+          "text": "2号車 12A/12D"
+        }
+      ],
+      "notes": [],
+      "links": [
+        {
+          "label": "嵯峨野観光鉄道 Eチケット",
+          "url": "https://t.linktivity.io/issueticket/sagano-kanko/JTBf4BDcGRUqTBf-/ARS_SAGANO_KANKO-20260605-UHPT/-"
+        }
+      ]
+    },
+    {
+      "id": "transfer_torokko_kameoka_bus",
+      "day": 1,
+      "type": "transfer",
+      "status": "confirmed",
+      "arrivalStation": "トロッコ亀岡",
+      "departureStation": "トロッコ亀岡駅",
+      "arrivalTime": "14:25",
+      "departureTime": "14:35",
+      "notes": [
+        "駅からバスへ乗換"
+      ],
+      "links": []
+    },
+    {
+      "id": "bus_hozugawa_boarding",
+      "day": 1,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "bus",
+      "from": "トロッコ亀岡駅",
+      "to": "保津川下り乗船場",
+      "departureTime": "14:35",
+      "arrivalTime": "14:45",
+      "line": "京阪京都交通バス 39",
+      "destination": "保津川下り乗船場",
+      "expenses": [
+        {
+          "name": "バス運賃",
+          "unitPrice": 500,
+          "qty": 2,
+          "total": 1000,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "バス"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_hozugawa_boarding_arrive",
+      "day": 1,
+      "type": "station",
+      "status": "confirmed",
+      "time": "14:45",
+      "name": "保津川下り乗船場",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "activity_hozugawa",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "15:00",
+      "name": "保津川下り",
+      "place": "保津川下り乗船場",
+      "expenses": [
+        {
+          "name": "乗船券",
+          "unitPrice": 6000,
+          "qty": 2,
+          "total": 12000,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "観光"
+        },
+        {
+          "type": "default",
+          "text": "予約済"
+        }
+      ],
+      "notes": [
+        "17:00頃終了予定"
+      ],
+      "links": [
+        {
+          "label": "保津川下り チケット",
+          "url": "https://file.linktivity.io/voucher/ARS_HOZUGAWA-20260605-ZT3N/I4OYnhtjjKUY3Zkb/mobile.pdf"
+        }
+      ]
+    },
+    {
+      "id": "checkin_hananoie",
+      "day": 1,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "18:00",
+      "name": "花のいえ チェックイン",
+      "place": "花のいえ",
+      "expenses": [
+        {
+          "name": "宿泊料",
+          "unitPrice": 19118,
+          "qty": 2,
+          "total": 38236,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "元気クーポン割引",
+          "unitPrice": -3000,
+          "qty": 1,
+          "total": -3000,
+          "payment": "other",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "元気クーポン割引",
+          "unitPrice": -2000,
+          "qty": 1,
+          "total": -2000,
+          "payment": "other",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "宿泊等利用補助券",
+          "unitPrice": -2000,
+          "qty": 2,
+          "total": -4000,
+          "payment": "other",
+          "planned": true,
+          "actual": true
+        },
+        {
+          "name": "宿泊勢",
+          "unitPrice": 500,
+          "qty": 2,
+          "total": 1000,
+          "payment": "cash",
+          "planned": true,
+          "actual": true
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "宿泊"
+        },
+        {
+          "type": "default",
+          "text": "夕朝食付"
+        }
+      ],
+      "notes": [
+        "【夏の京都といえばこれ】鱧しゃぶコース付宿泊プラン",
+        "6畳 1泊2日 夕朝食付",
+        "実質支払予定額: 30,236円"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_morning_walk",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "早朝",
+      "name": "早朝散歩 定番周遊コース",
+      "place": "嵐山周辺",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "観光"
+        }
+      ],
+      "notes": [
+        "所要40分"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_morning_bath_breakfast",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "朝",
+      "name": "朝風呂・朝食",
+      "place": "花のいえ",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "宿泊"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "activity_checkout_hananoie",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "10:00",
+      "name": "花のいえ チェックアウト・荷預け",
+      "place": "花のいえ",
+      "expenses": [
+        {
+          "name": "キャリーサービス（宿→京都駅）",
+          "unitPrice": 1500,
+          "qty": 1,
+          "total": 1500,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "チェックアウト"
+        },
+        {
+          "type": "default",
+          "text": "荷預け"
+        }
+      ],
+      "notes": [
+        "10:00まで"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_yoshimura_wait_check",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "午前",
+      "name": "嵐山よしむら 待ち状況確認",
+      "place": "嵐山よしむら",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "確認"
+        }
+      ],
+      "notes": [
+        "11:00開店"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_tenryuji",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "午前",
+      "name": "天龍寺",
+      "place": "嵐山",
+      "expenses": [
+        {
+          "name": "庭園拝観料",
+          "unitPrice": 500,
+          "qty": 2,
+          "total": 1000,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "観光"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "food_yoshimura",
+      "day": 2,
+      "type": "food",
+      "status": "confirmed",
+      "time": "11:00",
+      "name": "嵐山よしむら",
+      "place": "嵐山",
+      "expenses": [
+        {
+          "name": "鴨汁そば",
+          "unitPrice": 2100,
+          "qty": 2,
+          "total": 4200,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "昼食"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_hankyu_arashiyama_depart",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "11:57",
+      "name": "嵐山（阪急）",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_hankyu_arashiyama_katsura",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "嵐山（阪急）",
+      "to": "桂",
+      "departureTime": "11:57",
+      "arrivalTime": "12:05",
+      "line": "阪急嵐山線",
+      "destination": "桂",
+      "expenses": [
+        {
+          "name": "阪急運賃",
+          "unitPrice": 240,
+          "qty": 2,
+          "total": 480,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "阪急"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "transfer_katsura",
+      "day": 2,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "桂",
+      "arrivalTime": "12:05",
+      "departureTime": "12:07",
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_kyotrain_garaku",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "桂",
+      "to": "京都河原町",
+      "departureTime": "12:07",
+      "arrivalTime": "12:15",
+      "line": "阪急京都線 快速特急 京とれいん雅洛",
+      "destination": "京都河原町",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "train",
+          "text": "快速特急"
+        },
+        {
+          "type": "train",
+          "text": "京とれいん雅洛"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kyoto_kawaramachi_arrive",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "12:15",
+      "name": "京都河原町",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "activity_gion_walk",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "午後",
+      "name": "祇園四条・鴨川・八坂神社・祇園都路里 他",
+      "place": "祇園四条周辺",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "default",
+          "text": "観光"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_gionshijo_depart",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "13:42",
+      "name": "祇園四条",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [
+        "後続候補: 13:54発"
+      ],
+      "links": []
+    },
+    {
+      "id": "train_keihan_tokkyu",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "祇園四条",
+      "to": "中書島",
+      "departureTime": "13:42",
+      "arrivalTime": "13:53",
+      "line": "京阪本線 特急",
+      "destination": "淀屋橋",
+      "expenses": [
+        {
+          "name": "京阪運賃",
+          "unitPrice": 360,
+          "qty": 2,
+          "total": 720,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "特急"
+        }
+      ],
+      "notes": [
+        "後続候補: 13:54発 → 14:05着"
+      ],
+      "links": []
+    },
+    {
+      "id": "transfer_chushojima",
+      "day": 2,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "中書島",
+      "arrivalTime": "13:53",
+      "departureTime": "13:54",
+      "notes": [
+        "後続候補: 14:05着 → 14:06発"
+      ],
+      "links": []
+    },
+    {
+      "id": "train_keihan_uji",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "中書島",
+      "to": "三室戸",
+      "departureTime": "13:54",
+      "arrivalTime": "14:07",
+      "line": "京阪宇治線",
+      "destination": "宇治方面",
+      "expenses": [],
+      "tags": [
+        {
+          "type": "train",
+          "text": "京阪"
+        }
+      ],
+      "notes": [
+        "後続候補: 14:06発 → 14:19着"
+      ],
+      "links": []
+    },
+    {
+      "id": "st_mimurodo_arrive",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "14:07",
+      "name": "三室戸",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [
+        "徒歩15分"
+      ],
+      "links": []
+    },
+    {
+      "id": "activity_mimurotoji",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "午後",
+      "name": "三室戸寺 あじさい園",
+      "place": "三室戸寺",
+      "expenses": [
+        {
+          "name": "拝観料",
+          "unitPrice": 1000,
+          "qty": 2,
+          "total": 2000,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "観光"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "food_tsuen_soft",
+      "day": 2,
+      "type": "food",
+      "status": "confirmed",
+      "time": "午後",
+      "name": "通圓本店 抹茶ソフト",
+      "place": "宇治周辺",
+      "expenses": [
+        {
+          "name": "抹茶ソフト",
+          "unitPrice": 500,
+          "qty": 1,
+          "total": 500,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "おやつ"
+        }
+      ],
+      "notes": [
+        "数量の記載がなかったため 1個で入力"
+      ],
+      "links": []
+    },
+    {
+      "id": "st_uji_jr_depart",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "17:07",
+      "name": "宇治（JR）",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_jr_uji_kyoto",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "宇治（JR）",
+      "to": "京都",
+      "departureTime": "17:07",
+      "arrivalTime": "17:25",
+      "line": "JR奈良線 Dみやこ路快速",
+      "destination": "京都",
+      "expenses": [
+        {
+          "name": "JR運賃",
+          "unitPrice": 240,
+          "qty": 2,
+          "total": 480,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "JR"
+        },
+        {
+          "type": "train",
+          "text": "みやこ路快速"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kyoto_arrive_evening",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "17:25",
+      "name": "京都",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "activity_kyoto_dinner_souvenir",
+      "day": 2,
+      "type": "activity",
+      "status": "confirmed",
+      "time": "夕方",
+      "name": "京都駅周辺 観光・夕食",
+      "place": "京都駅周辺",
+      "expenses": [
+        {
+          "name": "夕食代",
+          "unitPrice": 2500,
+          "qty": 2,
+          "total": 5000,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        },
+        {
+          "name": "土産代",
+          "unitPrice": 3000,
+          "qty": 1,
+          "total": 3000,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "夕食"
+        },
+        {
+          "type": "default",
+          "text": "買い物"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "st_kyoto_depart_shinkansen",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "20:59",
+      "name": "京都",
+      "tags": [
+        {
+          "type": "default",
+          "text": "発"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "shinkansen_hikari_668",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "京都",
+      "to": "名古屋",
+      "departureTime": "20:59",
+      "arrivalTime": "21:33",
+      "line": "ひかり 668",
+      "destination": "名古屋",
+      "expenses": [
+        {
+          "name": "乗車券+指定席（EXファミリー早得7）",
+          "unitPrice": 4200,
+          "qty": 2,
+          "total": 8400,
+          "payment": "prepaid",
+          "planned": true,
+          "actual": true
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "新幹線"
+        }
+      ],
+      "notes": [
+        "事前支払済"
+      ],
+      "links": []
+    },
+    {
+      "id": "transfer_nagoya_subway",
+      "day": 2,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "名古屋",
+      "arrivalTime": "21:33",
+      "departureTime": "21:44",
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "train_sakuradori",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "train",
+      "from": "名古屋",
+      "to": "相生山",
+      "departureTime": "21:44",
+      "arrivalTime": "22:15",
+      "line": "桜通線",
+      "destination": "相生山",
+      "expenses": [
+        {
+          "name": "地下鉄運賃",
+          "unitPrice": 310,
+          "qty": 2,
+          "total": 620,
+          "payment": "ic",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "train",
+          "text": "地下鉄"
+        }
+      ],
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "transfer_aioiyama_bus",
+      "day": 2,
+      "type": "transfer",
+      "status": "confirmed",
+      "station": "相生山",
+      "arrivalTime": "22:15",
+      "departureTime": "22:26",
+      "notes": [],
+      "links": []
+    },
+    {
+      "id": "bus_aioiyama_sakaine",
+      "day": 2,
+      "type": "transport",
+      "status": "confirmed",
+      "mode": "bus",
+      "from": "相生山",
+      "to": "境根",
+      "departureTime": "22:26",
+      "arrivalTime": "22:28",
+      "line": "バス",
+      "destination": "境根方面",
+      "expenses": [
+        {
+          "name": "バス運賃",
+          "unitPrice": 110,
+          "qty": 1,
+          "total": 110,
+          "payment": "cash",
+          "planned": true,
+          "actual": false
+        }
+      ],
+      "tags": [
+        {
+          "type": "default",
+          "text": "バス"
+        }
+      ],
+      "notes": [
+        "数量の記載が x1人 のため 1人分で入力"
+      ],
+      "links": []
+    },
+    {
+      "id": "st_sakaine_arrive",
+      "day": 2,
+      "type": "station",
+      "status": "confirmed",
+      "time": "22:28",
+      "name": "境根",
+      "tags": [
+        {
+          "type": "default",
+          "text": "着"
+        }
+      ],
+      "notes": [],
+      "links": []
+    }
+  ]
+}

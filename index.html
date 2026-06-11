@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京都旅行</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">旅行計画</p>
+            <h1 id="tripTitle">京都旅行</h1>
+            <p id="tripDate" class="trip-date"></p>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="summary-card">
+            <h2>予算サマリー</h2>
+            <div id="budgetSummary"></div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="section-head">
+                <h2>タイムライン</h2>
+                <p class="section-note">項目をタップすると詳細を表示</p>
+            </div>
+            <div id="timeline"></div>
+        </section>
+    </main>
+
+    <div id="detailModal" class="modal hidden" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal="true"></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+            <button id="closeModalBtn" class="close-button" type="button" aria-label="閉じる">×</button>
+            <div id="detailBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
